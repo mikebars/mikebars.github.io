@@ -1,20 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 
-<html>
-  
+<html lang="en">
   <head>
-    
-    <meta charset="utf-8"/>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-    
-    <meta name="theme-color" content="#267EFF">
+    <meta charset="utf-8" />
 
-    <title>
+    <meta name="description" content="Mike Bars" />
 
-      Mike Bars
+    <meta name="theme-color" content="#d6729c" />
 
-    </title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0"
+    />
+
+    <title>Mike Bars</title>
 
     <style>
       * {
@@ -23,7 +22,8 @@
         font-weight: bolder;
       }
 
-      html, body {
+      html,
+      body {
         height: 100%;
         width: 100%;
         margin: 0;
@@ -31,94 +31,87 @@
       }
 
       .page {
-        display: table;
+        background-color: #d6729c;
         height: 100%;
+        position: relative;
         width: 100%;
-        background-color: #267EFF;
+      }
+
+      .content {
+        position: absolute;
+        margin: auto;
+        text-align: center;
+        top: 45%;
+        transform: translateY(-50%);
+        width: 100%;
       }
 
       .link {
-        text-decoration: none;
-      }
-
-      .card-container {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-      }
-
-      .card {
-        margin: auto;
-        margin-top: -10%;
-      }
-
-      .name-link {
-        background-color: #FFA726;
-        color: #FFF;
-        font-size: 3rem;
-        font-style: italic;
-        padding: 1rem 2rem;
-      }
-
-      .resume-container {
-        margin-top: 4rem;
-      }
-
-      .resume-link {
-        background-color: #FFA726;
-        color: #FFF;
+        color: black;
+        display: block;
         font-size: 2rem;
         font-style: italic;
+        margin: 1rem auto;
         padding: 1rem 2rem;
+        text-decoration: none;
+        width: fit-content;
+      }
+
+      .name {
+        font-size: 3rem;
       }
 
       .theme {
-        position: fixed;
         bottom: 0;
+        outline: none;
+        position: fixed;
         width: 100%;
       }
-    </style>
 
+      .theme::-webkit-media-controls-enclosure {
+        border-radius: 0;
+      }
+
+      .theme::-webkit-media-controls-panel {
+        background-color: #d6729c;
+      }
+    </style>
   </head>
 
   <body>
-
     <main class="page">
+      <nav class="content">
+        <a
+          class="name link"
+          href="https://mikebars.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Mike Bars
+        </a>
 
-      <section class="card-container">
+        <a
+          class="link"
+          href="https://github.com/mikebars/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
 
-        <article class="card">
-
-          <section class="name-container">
-
-            <a class="name-link link" href="https://github.com/mikebars/" target="_blank" rel="noopener noreferrer">
-
-              Mike Bars
-
-            </a>
-
-          </section>
-
-          <section class="resume-container">
-
-            <a class="resume-link link" href="resume.pdf" target="_blank" rel="noopener noreferrer">
-
-              Résumé
-
-            </a>
-
-          </section>
-
-        </article>
-
-      </section>
-
+        <a
+          class="link"
+          href="resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Résumé
+        </a>
+      </nav>
     </main>
 
-    <audio class="theme" src="theme.mp3" autoplay controls loop >
+    <audio class="theme" src="theme.mp3" autoplay controls loop>
       <!-- Theme Music -->
     </audio>
-
   </body>
-
 </html>
