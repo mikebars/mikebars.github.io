@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
 
     <meta name="description" content="Mike Bars" />
 
-    <meta name="theme-color" content="#d6729c" />
+    <meta name="theme-color" content="deepskyblue" />
 
     <meta
       name="viewport"
@@ -16,10 +16,12 @@
     <title>Mike Bars</title>
 
     <style>
-      * {
-        box-sizing: border-box;
-        font-family: Futura, sans-serif;
-        font-weight: bolder;
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+
+        user-select: inherit;
       }
 
       *:focus {
@@ -29,46 +31,66 @@
 
       html,
       body {
+        box-sizing: border-box;
+
         height: 100%;
+        min-height: 100vh;
         width: 100%;
+        min-width: 100vw;
+
         margin: 0;
         padding: 0;
+
+        user-select: none;
+      }
+
+      .background {
+        background-color: deepskyblue;
+
+        height: 100%;
+        width: 100%;
       }
 
       .page {
-        background-color: #d6729c;
-        height: 100%;
         position: relative;
+
+        height: 100%;
         width: 100%;
       }
 
       .content {
         position: absolute;
-        margin: auto;
-        text-align: center;
         top: 45%;
         transform: translateY(-50%);
+
         width: 100%;
+
+        margin: auto;
       }
 
       .link {
-        color: black;
         display: block;
-        font-size: 2rem;
-        font-style: italic;
-        margin: 1rem auto;
-        padding: 1rem 2rem;
-        text-decoration: none;
+
         width: fit-content;
+
+        margin: auto;
+        padding: 5vmin;
       }
 
-      .name {
-        font-size: 3rem;
+      .last.link {
+        margin-bottom: -5vmin;
+        margin-top: 5vmin;
+      }
+
+      .icon {
+        height: 20vmin;
+        width: 20vmin;
       }
 
       .theme {
-        bottom: 0;
         position: fixed;
+        bottom: 0;
+
         width: 100%;
       }
 
@@ -94,49 +116,281 @@
 
       .theme::-webkit-media-controls-enclosure {
         background: none;
+
         border-radius: 0;
       }
 
       .theme::-webkit-media-controls-panel {
-        background-color: #d6729c;
+        background-color: deepskyblue;
       }
     </style>
   </head>
 
   <body>
-    <main class="page">
-      <nav class="content">
-        <a
-          class="name link"
-          href="https://mikebars.github.io/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Mike Bars
-        </a>
+    <section class="background">
+      <main class="page">
+        <nav class="content">
+          <a
+            aria-label="https://github.com/mikebars/"
+            class="first link"
+            href="https://github.com/mikebars/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              width="420"
+              height="420"
+              viewBox="0 0 10 10"
+            >
+              <g id="logo">
+                <rect fill="black" x="0" y="0" width="4" height="2" />
+                <rect fill="black" x="6" y="0" width="4" height="2" />
+                <rect fill="black" x="0" y="4" width="2" height="6" />
+                <rect fill="black" x="4" y="4" width="2" height="4" />
+                <rect fill="black" x="8" y="4" width="2" height="6" />
+              </g>
+            </svg>
+          </a>
 
-        <a
-          class="link"
-          href="https://github.com/mikebars/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
+          <a
+            aria-label="https://mikebars.github.io/resume/"
+            class="last link"
+            href="https://mikebars.github.io/resume/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              width="1156"
+              height="1496"
+              viewbox="0 0 1156 1496"
+            >
+              <g id="resume">
+                <rect fill="white" x="0" y="0" width="1156" height="1496" />
 
-        <a
-          class="link"
-          href="resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Résumé
-        </a>
-      </nav>
-    </main>
+                <rect
+                  fill="hsl(180deg, 100%, 75%)"
+                  x="0"
+                  y="calc(187 * 1)"
+                  width="1156"
+                  height="calc(1496 / 8)"
+                />
 
-    <audio class="theme" src="theme.mp3" autoplay controls loop>
-      <!-- Theme Music -->
-    </audio>
+                <rect
+                  fill="hsl(300deg, 100%, 75%)"
+                  x="0"
+                  y="calc(187 * 2)"
+                  width="1156"
+                  height="calc(1496 / 8)"
+                />
+
+                <rect
+                  fill="hsl(60deg, 100%, 75%)"
+                  x="0"
+                  y="calc(187 * 3)"
+                  width="1156"
+                  height="calc(1496 / 8)"
+                />
+
+                <rect
+                  fill="hsl(0deg, 100%, 75%)"
+                  x="0"
+                  y="calc(187 * 4)"
+                  width="1156"
+                  height="calc(1496 / 8)"
+                />
+
+                <rect
+                  fill="hsl(120deg, 100%, 75%)"
+                  x="0"
+                  y="calc(187 * 5)"
+                  width="1156"
+                  height="calc(1496 / 8)"
+                />
+
+                <rect
+                  fill="hsl(240deg, 100%, 75%)"
+                  x="0"
+                  y="calc(187 * 6)"
+                  width="1156"
+                  height="calc(1496 / 8)"
+                />
+
+                <rect
+                  fill="black"
+                  x="calc(calc(1156 / 2) - calc(calc(calc(1156 / 2) - calc(calc(1156 * 0.075) * 2)) * 0.5)"
+                  y="calc(calc(calc(1496 / 8) * 0.5) - calc(calc(calc(1496 / 8) * 0.5) * 0.5))"
+                  width="calc(calc(1156 / 2) - calc(calc(1156 * 0.075) * 2))"
+                  height="calc(calc(1496 / 8) * 0.5)"
+                />
+
+                <rect
+                  fill="black"
+                  x="calc(calc(0 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 1.5) - calc(calc(calc(1496 / 8) * 0.375) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.375)"
+                />
+                <rect
+                  fill="black"
+                  x="calc(calc(1 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 1.5) - calc(calc(calc(1496 / 8) * 0.25) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.25)"
+                />
+                <rect
+                  fill="black"
+                  x="calc(calc(2 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 1.5) - calc(calc(calc(1496 / 8) * 0.25) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.25)"
+                />
+
+                <rect
+                  fill="black"
+                  x="calc(calc(0 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 2.5) - calc(calc(calc(1496 / 8) * 0.375) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.375)"
+                />
+                <rect
+                  fill="black"
+                  x="calc(calc(1 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 2.5) - calc(calc(calc(1496 / 8) * 0.25) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.25)"
+                />
+                <rect
+                  fill="black"
+                  x="calc(calc(2 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 2.5) - calc(calc(calc(1496 / 8) * 0.25) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.25)"
+                />
+
+                <rect
+                  fill="black"
+                  x="calc(calc(0 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 3.5) - calc(calc(calc(1496 / 8) * 0.375) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.375)"
+                />
+                <rect
+                  fill="black"
+                  x="calc(calc(1 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 3.5) - calc(calc(calc(1496 / 8) * 0.25) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.25)"
+                />
+                <rect
+                  fill="black"
+                  x="calc(calc(2 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 3.5) - calc(calc(calc(1496 / 8) * 0.25) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.25)"
+                />
+
+                <rect
+                  fill="black"
+                  x="calc(calc(0 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 4.5) - calc(calc(calc(1496 / 8) * 0.375) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.375)"
+                />
+                <rect
+                  fill="black"
+                  x="calc(calc(1 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 4.5) - calc(calc(calc(1496 / 8) * 0.25) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.25)"
+                />
+                <rect
+                  fill="black"
+                  x="calc(calc(2 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 4.5) - calc(calc(calc(1496 / 8) * 0.25) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.25)"
+                />
+
+                <rect
+                  fill="black"
+                  x="calc(calc(0 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 5.5) - calc(calc(calc(1496 / 8) * 0.375) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.375)"
+                />
+                <rect
+                  fill="black"
+                  x="calc(calc(1 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 5.5) - calc(calc(calc(1496 / 8) * 0.25) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.25)"
+                />
+                <rect
+                  fill="black"
+                  x="calc(calc(2 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 5.5) - calc(calc(calc(1496 / 8) * 0.25) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.25)"
+                />
+
+                <rect
+                  fill="black"
+                  x="calc(calc(0 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 6.5) - calc(calc(calc(1496 / 8) * 0.375) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.375)"
+                />
+                <rect
+                  fill="black"
+                  x="calc(calc(1 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 6.5) - calc(calc(calc(1496 / 8) * 0.25) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.25)"
+                />
+                <rect
+                  fill="black"
+                  x="calc(calc(2 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 6.5) - calc(calc(calc(1496 / 8) * 0.25) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.25)"
+                />
+
+                <rect
+                  fill="black"
+                  x="calc(calc(0 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 7.5) - calc(calc(calc(1496 / 8) * 0.25) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.25)"
+                />
+                <rect
+                  fill="black"
+                  x="calc(calc(1156 / 2) - calc(calc(calc(1496 / 8) * 0.5) * 0.5))"
+                  y="calc(calc(calc(1496 / 8) * 7.5) - calc(calc(calc(1496 / 8) * 0.5) * 0.5))"
+                  width="calc(calc(1496 / 8) * 0.5)"
+                  height="calc(calc(1496 / 8) * 0.5)"
+                />
+                <rect
+                  fill="black"
+                  x="calc(calc(2 * calc(1156 / 3)) + calc(1156 * 0.05))"
+                  y="calc(calc(calc(1496 / 8) * 7.5) - calc(calc(calc(1496 / 8) * 0.25) * 0.5))"
+                  width="calc(calc(1156 / 3) - calc(calc(1156 * 0.05) * 2))"
+                  height="calc(calc(1496 / 8) * 0.25)"
+                />
+              </g>
+            </svg>
+          </a>
+        </nav>
+      </main>
+
+      <audio class="theme" src="theme.mp3" autoplay controls loop preload>
+        <!-- Theme Music -->
+      </audio>
+    </section>
   </body>
 </html>
