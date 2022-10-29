@@ -25,6 +25,7 @@
       }
 
       *:focus {
+        outline-color: white;
         outline-style: dashed;
         outline-width: thick;
       }
@@ -87,7 +88,15 @@
         width: 100%;
       }
 
+      .bar {
+        fill: white;
+      }
+
       .theme {
+        filter: invert();
+
+        outline-color: black;
+
         position: fixed;
         bottom: 0;
 
@@ -145,12 +154,12 @@
               height="420"
               viewBox="0 0 10 10"
             >
-              <g id="logo">
-                <rect fill="black" x="0" y="0" width="4" height="2" />
-                <rect fill="black" x="6" y="0" width="4" height="2" />
-                <rect fill="black" x="0" y="4" width="2" height="6" />
-                <rect fill="black" x="4" y="4" width="2" height="4" />
-                <rect fill="black" x="8" y="4" width="2" height="6" />
+              <g class="logo">
+                <rect class="bar" x="0" y="0" width="4" height="2" />
+                <rect class="bar" x="6" y="0" width="4" height="2" />
+                <rect class="bar" x="0" y="4" width="2" height="6" />
+                <rect class="bar" x="4" y="4" width="2" height="4" />
+                <rect class="bar" x="8" y="4" width="2" height="6" />
               </g>
             </svg>
           </a>
@@ -170,14 +179,8 @@
               height="1496"
               viewbox="0 0 1156 1496"
             >
-              <g id="resume">
-                <rect
-                  fill="white"
-                  x="0"
-                  y="0"
-                  width="1156"
-                  height="1496"
-                />
+              <g class="resume">
+                <rect fill="white" x="0" y="0" width="1156" height="1496" />
 
                 <rect
                   fill="hsl(180deg, 100%, 90%)"
@@ -352,7 +355,14 @@
         </nav>
       </main>
 
-      <audio class="theme" src="theme.mp3" autoplay controls loop preload>
+      <audio
+        class="theme"
+        src="theme.mp3"
+        controls
+        controlslist="nodownload nofullscreen noplaybackrate noremoteplayback"
+        loop
+        preload
+      >
         <!-- Theme Music -->
       </audio>
     </section>
